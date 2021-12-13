@@ -4,6 +4,7 @@ version: 1.0.0
 description: Allows you to freeze players in place.
 author: TurtlesAreHot
 api-version: 1.13
+depend: [ProjectKorra]
 commands:
   freeze:
     description: Freezes the given player in place.
