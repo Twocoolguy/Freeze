@@ -17,7 +17,9 @@ public class Main extends JavaPlugin {
         this.instance = this;
         frozenPlayers = new ArrayList<>();
         getCommand("freeze").setExecutor(new Freeze());
-        this.getServer().getPluginManager().registerEvents(new onBend(), this);
+        if(this.getServer().getPluginManager().getPlugin("ProjectKorra") != null) {
+            this.getServer().getPluginManager().registerEvents(new onBend(), this);
+        }
         this.getServer().getPluginManager().registerEvents(new onMove(), this);
         this.getServer().getPluginManager().registerEvents(new onPlayerQuit(), this);
     }
